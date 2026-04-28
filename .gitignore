@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.mp4
+*.mp3
+/tmp/
+public/videos/*.mp4
+*.log
