@@ -65,7 +65,7 @@ async function generateScript({ idea, language = 'ar', videoType = 'educational'
     console.log('  ⚠️  OpenAI غير متوفر — استخدام بيانات تجريبية');
     await sleep(800); // محاكاة التأخير
     const mock = MOCK_DATA[language] || MOCK_DATA.ar;
-    return mock(idea);
+    const r=mock(idea); r.viralScore=Math.floor(Math.random()*20)+78; return r;
   }
 
   const response = await client.chat.completions.create({
